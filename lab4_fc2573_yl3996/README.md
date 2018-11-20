@@ -17,36 +17,35 @@ Python 3.6.5
 ## Usage
 ​1. Open the PC terminal 
 
-2. Rewrite the directory of .txt files
-In both .py files, edit:
+2. Rewrite the directory of .txt files in main funtion (in both .py files)
 ```
 if __name__ == "__main__":
 
     ...
 
-    path = build_obstacle_course('/*your directory of world_obstacles.txt*', ax)
+    path = build_obstacle_course('/your directory of world_obstacles.txt', ax)
 
-    start, goal = add_start_and_goal('/*your directory of start_goal.txt*', ax)
+    start, goal = add_start_and_goal('/your directory of start_goal.txt', ax)
     
     ...
     
-    E_obs = E_obs('/*your directory of world_obstacles.txt*')
+    E_obs = E_obs('/your directory of world_obstacles.txt')
     
     ...
 ```
 
 3. Run the program (an example of running single-directional RRT)
 ```
-cd ~/*your directory of singledirectional_rrt.py*
+cd ~/your directory of singledirectional_rrt.py
 
 python singledirectional_rrt.py world_obstacles.txt start_goal.txt
 ```
 
 ​4. Set the parameters
 ```
-value of stepsize (should be bigger than density)
+stepsize value (should be bigger than density)
 
-value of density (value less than 20 is recommended)
+density value (less than 20 is recommended)
 ```
 
 (In the video examples, we tested two RRT algorithms with: stepsize=30, density=15; stepsize=50, density=15; stepsize=70, density=20.)
